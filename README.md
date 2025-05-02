@@ -1,1 +1,0 @@
-# algasensors-device-management
