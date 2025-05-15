@@ -88,11 +88,11 @@ public class SensorController {
     public SensorDetailtOutput getOneWithDetail(@PathVariable TSID sensorId) {
         Sensor sensor = getSensorByIdOrElseThrow(sensorId);
 
-        SensorMonitoringOutput monitoringOutput = sensorMonitoringClient.geDetail(sensorId);
+        SensorMonitoringOutput sensorMonitoringOutput = sensorMonitoringClient.geDetail(sensorId);
 
         return SensorDetailtOutput.builder()
                 .sensor(convertToOutput(sensor))
-                .monitoring(monitoringOutput)
+                .monitoring(sensorMonitoringOutput)
                 .build();
     }
 
